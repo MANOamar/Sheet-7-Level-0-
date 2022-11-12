@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+void test(int num )
+{
+    if (num%10 == num) //test to make sure if i reach to the last number or what;
+    {
+        cout << num << " "; 
+        return ;
+    }
+    test(num/10); // to reach to the last number
+    cout << num % 10 << " "; // to print the numbers separtly
+}
+int main()
+{    
+    int t,i;
+    cin >> t;
+    for (i = 0; i < t; i++)
+    {
+        long long N;
+        cin >> N;
+        test(N);
+        cout << endl;
+    }
+    return 0;     
+}
