@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+long long test(int num )
+{
+    if (num == 1)
+        return 1;
+    else
+        return num*test(num - 1);
+}
+int main()
+{  
+    int N;
+    cin >> N;
+    cout<<test(N); 
+    return 0;
+}
